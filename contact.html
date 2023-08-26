@@ -1,0 +1,266 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable= no shrink-to-fit= no">
+    <title>Epal Solutions</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/fav.svg">
+    <!-- required css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/leaflet.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- preloader -->
+    <div class="preloader">
+        <div class="preloaderImg"></div>
+    </div>
+    <!-- header -->
+    <nav class="header">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/EPAL-SOLUTIONS-LOGO-COLOR.png" alt="logo">
+                </a>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li class="nav-link active">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="works.html">Our Works</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="btns">
+                <a href="contact.html" class="link">
+                    Get A Qoute
+                </a>
+                <div class="toogler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- main-wrapper -->
+    <main class="content">
+        <!-- ======= page-header  -->
+        <div class="section-header">
+            <h1>Contact us</h1>
+            <h6><a href="index.html">HOME</a> / CONTACT US</h6>
+        </div>
+        <div class="contact container">
+            <div class="row form">
+                <div class="col-12 pe-lg-5 pe-0 ps-lg-5 ps-0">
+                    <form action="">
+                        <div class="form-group">
+                            <!-- field-set -->
+                            <div class="inputfield">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" onfocus="highlight(this)"
+                                    onblur="dehighlight(this)">
+                                <span class="highlight"></span>
+                            </div>
+                            <!-- field-set -->
+                            <div class="inputfield">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" onfocus="highlight(this)"
+                                    onblur="dehighlight(this)">
+                                <span class="highlight"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!-- field-set -->
+                            <div class="inputfield">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" onfocus="highlight(this)"
+                                    onblur="dehighlight(this)">
+                                <span class="highlight"></span>
+                            </div>
+                            <!-- field-set -->
+                            <div class="inputfield">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" onfocus="highlight(this)"
+                                    onblur="dehighlight(this)">
+                                <span class="highlight"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <!-- field-set -->
+                            <div class="inputfield">
+                                <label for="message" class="message-label">Your Message</label>
+                                <textarea name="message" id="message" onfocus="highlight(this)"
+                                    onblur="dehighlight(this)"></textarea>
+                                <span class="highlight"></span>
+                            </div>
+                        </div>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row map-info">
+                <div class="col-lg-4 col-12 me-lg-5 me-0 ms-lg-5 ms-0 info">
+                    <h2>Contact Info</h2>
+                    <div class="info-card">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-phone"></i>
+                        </div>
+                        <a href="tel:+617-337-7150">USA : 617-337-7150</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-phone"></i>
+                        </div>
+                        <a href="tel:+437-267-7566">Canada: 437-267-7566</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-envelope"></i>
+                        </div>
+                        <a href="mailto:info@epalsolutions.com">info@epalsolutions.com</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        </div>
+                        <a href="https://goo.gl/maps/bPHkdEQ8tsNfPwPH8">Boston, Massachusetts, USA.</a>
+                    </div>
+                    <div class="info-card">
+                        <div class="icon">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        </div>
+                        <a href="https://goo.gl/maps/ygr5EPGorX11u2KT6">Toronto, Ontario, Canada.</a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-12 pe-lg-5 pe-0 ps-0 map">
+                    <div class="w-100 h-100" id="mapLocation"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-12">
+                    <div class="logo">
+                        <img src="assets/images/EPAL-SOLUTIONS-LOGO-WHITE.png" alt="">
+                    </div>
+                    <p class="about">
+                        Epal Solutions is a dynamic and innovative software development company. We specialize in
+                        creating cutting-edge solutions that drive growth, efficiency, and success for businesses across
+                        industries.
+                    </p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 column">
+                    <div class="title">
+                        <h2>Our Solutions</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="works.html">Web Development</a>
+                        </li>
+                        <li>
+                            <a href="works.html">Mobile Development</a>
+                        </li>
+                        <li>
+                            <a href="works.html">Outsourcing</a>
+                        </li>
+                        <li>
+                            <a href="works.html">Data analytics</a>
+                        </li>
+                        <li>
+                            <a href="works.html">Software Development</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 col-12 column column-2">
+                    <div class="title">
+                        <h2>Company</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="about.html">About Us</a>
+                        </li>
+                        <li>
+                            <a href="">Careers</a>
+                        </li>
+                        <li>
+                            <a href="contact.html">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="">Privacy Policy</a>
+                        </li>
+                        <li>
+                            <a href="">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 copyrights">
+                    <p>Copyright © 2023 All rights reserved by Epal Solutions.</p>
+                    <!-- <ul class="social-media">
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/leaflet.js"></script>
+<script src="assets/js/custom.js"></script>
+<script>
+    //contact-map
+    if (navigator.geolocation) {
+        var places = [
+            { name: "Toronto, Ontario, Canada", coords: [43.6532, -79.3832] },
+            { name: "Boston, Massachusetts, USA", coords: [42.3601, -71.0589] }
+        ];
+        navigator.geolocation.getCurrentPosition(function (position) {
+            const { latitude, longitude } = position.coords;
+            const coords = [latitude, longitude];
+            const map = L.map("mapLocation").setView([43.0, -75.0], 5);
+            L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
+                attribution:
+                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+            places.forEach(place => {
+                L.marker(place.coords).addTo(map).bindPopup(place.name).openPopup();
+            });
+        });
+    }
+</script>
+
+</html>
