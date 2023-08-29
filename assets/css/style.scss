@@ -277,13 +277,13 @@ $text-gradiant: linear-gradient(272.54deg, #ffabe6 12.86%, #857fff 68.06%);
         align-items: center;
         .swiper-pagination-bullet {
           transition: all 0.4s ease-in-out;
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
           border: 1px solid $text-hover;
           transform: rotate(45deg);
           background-color: unset;
           border-radius: 0;
-          &.swiper-pagination-bullet-active{
+          &.swiper-pagination-bullet-active {
             background-color: $text-hover;
           }
         }
@@ -388,6 +388,16 @@ $text-gradiant: linear-gradient(272.54deg, #ffabe6 12.86%, #857fff 68.06%);
         right: -80px;
         img {
           max-width: 100%;
+          animation: scaler 5s ease-in-out infinite;
+        }
+      }
+      @keyframes scaler {
+        0%,
+        100% {
+          transform: scale(.6);
+        }
+        50% {
+          transform: scale(1);
         }
       }
       .statics-card {
@@ -449,9 +459,27 @@ $text-gradiant: linear-gradient(272.54deg, #ffabe6 12.86%, #857fff 68.06%);
         width: 100px;
         position: absolute;
         top: 100px;
-        left: -60px;
+        left: -30px;
         img {
           max-width: 100%;
+          animation: rotator 5s linear infinite;
+        }
+      }
+      .strip3 {
+        width: 100px;
+        position: absolute;
+        top: 0;
+        right: -150px;
+        img {
+          max-width: 100%;
+        }
+      }
+      @keyframes rotator {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
         }
       }
       h3 {
@@ -478,9 +506,10 @@ $text-gradiant: linear-gradient(272.54deg, #ffabe6 12.86%, #857fff 68.06%);
           width: 80px;
           height: 80px;
           border-radius: 4px;
-          @include centerFlex();
+          display: flex;
+          align-items: center;
           img {
-            max-height: 40px;
+            max-height: 50px;
           }
         }
         h4 {

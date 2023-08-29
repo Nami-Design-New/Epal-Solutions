@@ -166,3 +166,20 @@ $(document).ready(function () {
   }
   setFavicon();
 });
+$(document).ready(function () {
+  //aos Delay
+  $("section").each(function () {
+      const sectionDivs = $(this).find("[data-aos]");
+      sectionDivs.each(function (index) {
+          $(this).attr("data-aos-delay", (index + 1) * 100);
+      });
+  });
+  // aos
+  AOS.init({
+      offset: 20,
+      delay: 50,
+      duration: 500,
+      easing: "linear",
+      once: true
+  });
+});
