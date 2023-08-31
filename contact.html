@@ -62,91 +62,97 @@
             <h1>Contact us</h1>
             <h6><a href="index.html">HOME</a> / CONTACT US</h6>
         </div>
-        <div class="contact container">
-            <div class="row form">
-                <div class="col-12 pe-lg-5 pe-0 ps-lg-5 ps-0">
-                    <form action="">
-                        <div class="form-group">
-                            <!-- field-set -->
-                            <div class="inputfield">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" onfocus="highlight(this)"
-                                    onblur="dehighlight(this)">
-                                <span class="highlight"></span>
-                            </div>
-                            <!-- field-set -->
-                            <div class="inputfield">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" onfocus="highlight(this)"
-                                    onblur="dehighlight(this)">
-                                <span class="highlight"></span>
-                            </div>
+        <div class="contact">
+            <div class="container">
+                <div class="form">
+                    <div class="row ">
+                        <div class="col-12 pe-lg-5 pe-0 ps-lg-5 ps-0">
+                            <form action="">
+                                <div class="form-group">
+                                    <!-- field-set -->
+                                    <div class="inputfield">
+                                        <label for="name">Full Name</label>
+                                        <input type="text" id="name" name="name" onfocus="highlight(this)"
+                                            onblur="dehighlight(this)">
+                                        <span class="highlight"></span>
+                                    </div>
+                                    <!-- field-set -->
+                                    <div class="inputfield">
+                                        <label for="email">Email Address</label>
+                                        <input type="email" id="email" name="email" onfocus="highlight(this)"
+                                            onblur="dehighlight(this)">
+                                        <span class="highlight"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <!-- field-set -->
+                                    <div class="inputfield">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" onfocus="highlight(this)"
+                                            onblur="dehighlight(this)">
+                                        <span class="highlight"></span>
+                                    </div>
+                                    <!-- field-set -->
+                                    <div class="inputfield">
+                                        <label for="subject">Subject</label>
+                                        <input type="text" id="subject" name="subject" onfocus="highlight(this)"
+                                            onblur="dehighlight(this)">
+                                        <span class="highlight"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <!-- field-set -->
+                                    <div class="inputfield">
+                                        <label for="message" class="message-label">Your Message</label>
+                                        <textarea name="message" id="message" onfocus="highlight(this)"
+                                            onblur="dehighlight(this)"></textarea>
+                                        <span class="highlight"></span>
+                                    </div>
+                                </div>
+                                <button type="submit">Send Message</button>
+                            </form>
                         </div>
-                        <div class="form-group">
-                            <!-- field-set -->
-                            <div class="inputfield">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone" onfocus="highlight(this)"
-                                    onblur="dehighlight(this)">
-                                <span class="highlight"></span>
-                            </div>
-                            <!-- field-set -->
-                            <div class="inputfield">
-                                <label for="subject">Subject</label>
-                                <input type="text" id="subject" name="subject" onfocus="highlight(this)"
-                                    onblur="dehighlight(this)">
-                                <span class="highlight"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <!-- field-set -->
-                            <div class="inputfield">
-                                <label for="message" class="message-label">Your Message</label>
-                                <textarea name="message" id="message" onfocus="highlight(this)"
-                                    onblur="dehighlight(this)"></textarea>
-                                <span class="highlight"></span>
-                            </div>
-                        </div>
-                        <button type="submit">Send Message</button>
-                    </form>
-                </div>
-            </div>
-            <div class="row map-info">
-                <div class="col-lg-4 col-12 me-lg-5 me-0 ms-lg-5 ms-0 info">
-                    <h2>Contact Info</h2>
-                    <div class="info-card">
-                        <div class="icon">
-                            <i class="fa-sharp fa-solid fa-phone"></i>
-                        </div>
-                        <a href="tel:+1617-337-7150">USA : +1617-337-7150</a>
-                    </div>
-                    <div class="info-card">
-                        <div class="icon">
-                            <i class="fa-sharp fa-solid fa-phone"></i>
-                        </div>
-                        <a href="tel:+1437-267-7566">Canada: +1437-267-7566</a>
-                    </div>
-                    <div class="info-card">
-                        <div class="icon">
-                            <i class="fa-sharp fa-solid fa-envelope"></i>
-                        </div>
-                        <a href="mailto:info@epalsolutions.com">info@epalsolutions.com</a>
-                    </div>
-                    <div class="info-card">
-                        <div class="icon">
-                            <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        </div>
-                        <a href="https://goo.gl/maps/bPHkdEQ8tsNfPwPH8">Boston, Massachusetts, USA.</a>
-                    </div>
-                    <div class="info-card">
-                        <div class="icon">
-                            <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        </div>
-                        <a href="https://goo.gl/maps/ygr5EPGorX11u2KT6">Toronto, Ontario, Canada.</a>
                     </div>
                 </div>
-                <div class="col-lg-7 col-12 pe-lg-5 pe-0 ps-0 map">
-                    <div class="w-100 h-100" id="mapLocation"></div>
+                <div class="map-info">
+                    <div class="row">
+                        <div class="col-lg-4 col-12 me-lg-5 me-0 ms-lg-5 ms-0 info">
+                            <h2>Contact Info</h2>
+                            <div class="info-card">
+                                <div class="icon">
+                                    <i class="fa-sharp fa-solid fa-phone"></i>
+                                </div>
+                                <a href="tel:+1617-337-7150">USA : +1617-337-7150</a>
+                            </div>
+                            <div class="info-card">
+                                <div class="icon">
+                                    <i class="fa-sharp fa-solid fa-phone"></i>
+                                </div>
+                                <a href="tel:+1437-267-7566">Canada: +1437-267-7566</a>
+                            </div>
+                            <div class="info-card">
+                                <div class="icon">
+                                    <i class="fa-sharp fa-solid fa-envelope"></i>
+                                </div>
+                                <a href="mailto:info@epalsolutions.com">info@epalsolutions.com</a>
+                            </div>
+                            <div class="info-card">
+                                <div class="icon">
+                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                </div>
+                                <a target="_blank" href="https://www.google.com/maps/place/%D8%A8%D9%88%D8%B3%D8%B7%D9%86%D8%8C+%D9%85%D8%A7%D8%B3%D8%A7%D8%AA%D8%B4%D9%88%D8%B3%D8%AA%D8%B3%D8%8C+%D8%A7%D9%84%D9%88%D9%84%D8%A7%D9%8A%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D8%AA%D8%AD%D8%AF%D8%A9%E2%80%AD/@42.3144474,-70.887884,12z/data=!3m1!4b1!4m6!3m5!1s0x89e3652d0d3d311b:0x787cbf240162e8a0!8m2!3d42.3600825!4d-71.0588801!16zL20vMDFjeF8?entry=ttu">Boston, Massachusetts, USA.</a>
+                            </div>
+                            <div class="info-card">
+                                <div class="icon">
+                                    <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                </div>
+                                <a target="_blank" href="https://goo.gl/maps/ygr5EPGorX11u2KT6">Toronto, Ontario, Canada.</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-12 pe-lg-5 pe-0 ps-0 map">
+                            <div class="w-100 h-100" id="mapLocation"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -238,29 +244,18 @@
         </div>
     </footer>
 </body>
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
 <script src="js/main.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
 <script src="js/leaflet.js"></script>
 <script src="js/custom.js"></script>
-<script>
-    //contact-map
-    if (navigator.geolocation) {
-        var places = [
-            { name: "Toronto, Ontario, Canada", coords: [43.6532, -79.3832] },
-            { name: "Boston, Massachusetts, USA", coords: [42.3601, -71.0589] }
-        ];
-        navigator.geolocation.getCurrentPosition(function (position) {
-            const { latitude, longitude } = position.coords;
-            const coords = [latitude, longitude];
-            const map = L.map("mapLocation").setView([43.0, -75.0], 5);
-            L.tileLayer("https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png", {
-                attribution:
-                    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-            places.forEach(place => {
-                L.marker(place.coords).addTo(map).bindPopup(place.name).openPopup();
-            });
-        });
-    }
-</script>
+
 
 </html>

@@ -246,21 +246,22 @@ main {
   position: relative;
 }
 .hero-section {
-  background-image: url("../img/hero-section.webp");
+  // background-image: url("../img/hero-section.webp");
   background-size: cover;
   background-position: 50% 85%;
+  background-color: #f8f9fd;
   width: 100%;
   .hero-swiper {
     width: 100%;
-    flex-direction: column;
     gap: 24px;
-    padding: 24px 8px;
+    padding-bottom: 24px;
+    flex-direction: column;
     @include centerFlex();
     .swiper-slide {
+      padding: 24px;
       display: flex;
       // justify-content: center;
       cursor: grab;
-      flex-direction: column;
       height: auto;
       @media (max-width: 992px) {
         align-items: center;
@@ -293,7 +294,6 @@ main {
   .hero-description {
     height: 100%;
     display: flex;
-    min-height: calc(100vh - 80px);
     justify-content: center;
     flex-direction: column;
     gap: 24px;
@@ -375,7 +375,56 @@ main {
       }
     }
   }
+  .headImg {
+    width: 100%;
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      padding: 20px;
+    }
+  }
 }
+
+.swiper-slide.swiper-slide-active {
+  h1 {
+    animation: fadeInUp 1s .5s both;
+  }
+  p {
+    animation: fadeInUp 1s 1s both;
+  }
+  .links {
+    animation: fadeInUp 1s 1.5s both;
+  }
+  .headImg {
+    animation: slideInRight 1s .5s both;
+  }
+  
+
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
 .statics {
   position: relative;
   width: 100%;
@@ -709,10 +758,10 @@ main {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
-  
+
     p {
       margin-bottom: 0;
-      flex: 1 ;
+      flex: 1;
       min-width: calc(50% - 6px);
       display: flex;
       align-items: center;
@@ -740,206 +789,218 @@ main {
   background-color: $white;
   padding-bottom: 80px;
 }
-.about {
-  width: 100%;
-  padding: 60px 0;
-  .about-wrap {
-    padding-bottom: 60px;
-    .illustiration {
-      width: 100%;
-      img {
-        max-width: 100%;
-      }
-    }
-    .about-text {
-      h2 {
-        color: $main-color;
-        font-size: 40px;
-        font-weight: 600;
-        margin-bottom: 24px;
-        position: relative;
-        padding-left: 48px;
-        @media (max-width: 576px) {
-          font-size: 32px;
-        }
-        &::after {
-          width: 32px;
-          height: 2px;
-          content: "";
-          top: 50%;
-          transform: translateY(-50%);
-          background: $main-color;
-          position: absolute;
-          left: 0;
-        }
-      }
-      p {
-        line-height: 28px;
-        color: #7b88a8;
-      }
+.about-wrap {
+  padding-bottom: 60px;
+  .illustiration {
+    width: 100%;
+    img {
+      max-width: 100%;
     }
   }
-  .team {
-    padding: 60px 0;
-    h3 {
-      text-align: center;
+  .about-text {
+    h2 {
       color: $main-color;
       font-size: 40px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      position: relative;
+      padding-left: 48px;
+      @media (max-width: 576px) {
+        font-size: 32px;
+      }
+      &::after {
+        width: 32px;
+        height: 2px;
+        content: "";
+        top: 50%;
+        transform: translateY(-50%);
+        background: $main-color;
+        position: absolute;
+        left: 0;
+      }
     }
     p {
-      font-size: 16px;
-      line-height: 24px;
-      text-align: center;
-      width: min(100%, 700px);
+      line-height: 28px;
       color: #7b88a8;
-      margin: 0 auto;
     }
-    .swiper {
-      display: flex;
-      flex-direction: column;
-      padding: 80px 0 0;
-      .swiper-slide {
-        @include centerFlex();
-        .team-member {
-          width: 100%;
-          border: 1px solid #eeeeee;
-          padding: 16px;
-          border-radius: 4px;
-          transition: $transation;
-          &:hover {
-            border-color: transparent;
-            box-shadow: $shadow;
-            transform: translateY(-16px);
-            .img .social-media {
-              height: 200px;
-            }
+  }
+
+  @media (min-width: 768px) {
+    .row:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+  }
+}
+.team {
+  padding: 60px 0;
+  h3 {
+    text-align: center;
+    color: $main-color;
+    font-size: 40px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    width: min(100%, 700px);
+    color: #7b88a8;
+    margin: 0 auto;
+  }
+  .swiper {
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0 0;
+    .swiper-slide {
+      @include centerFlex();
+      .team-member {
+        width: 100%;
+        border: 1px solid #eeeeee;
+        padding: 16px;
+        border-radius: 4px;
+        transition: $transation;
+        &:hover {
+          border-color: transparent;
+          box-shadow: $shadow;
+          transform: translateY(-16px);
+          .img .social-media {
+            height: 200px;
           }
-          .img {
+        }
+        .img {
+          width: 100%;
+          border-radius: 4px;
+          overflow: hidden;
+          position: relative;
+          img {
             width: 100%;
-            border-radius: 4px;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+          }
+          .social-media {
+            transition: $transation;
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            height: 0;
             overflow: hidden;
-            position: relative;
-            img {
-              width: 100%;
-              aspect-ratio: 1/1;
-              object-fit: cover;
-            }
-            .social-media {
+            a {
+              width: 30px;
+              height: 30px;
+              border-radius: 4px;
+              @include centerFlex();
               transition: $transation;
-              position: absolute;
-              top: 8px;
-              left: 8px;
-              display: flex;
-              flex-direction: column;
-              gap: 12px;
-              height: 0;
-              overflow: hidden;
-              a {
-                width: 30px;
-                height: 30px;
-                border-radius: 4px;
-                @include centerFlex();
-                transition: $transation;
-                backdrop-filter: blur(16px) saturate(180%);
-                background-color: rgba(255, 255, 255, 0.1);
-                i {
-                  font-size: 14px;
-                  color: $main-color;
-                }
+              backdrop-filter: blur(16px) saturate(180%);
+              background-color: rgba(255, 255, 255, 0.1);
+              i {
+                font-size: 14px;
+                color: $main-color;
               }
             }
           }
-          h6 {
-            font-size: 18px;
-            line-height: 28px;
-            text-align: center;
-            font-weight: 700;
-            margin-top: 16px;
-            margin-bottom: 0px;
-          }
-          p {
-            font-size: 14px;
-          }
+        }
+        h6 {
+          font-size: 18px;
+          line-height: 28px;
+          text-align: center;
+          font-weight: 700;
+          margin-top: 16px;
+          margin-bottom: 0px;
+        }
+        p {
+          font-size: 14px;
         }
       }
-      .teamSwiperPagination {
-        padding: 40px 0 16px;
-        @include centerFlex();
-        gap: 4px;
-        .swiper-pagination-bullet {
-          width: 10px;
-          height: 10px;
-          border-radius: 0;
-          border: 1px solid $text-color;
-          background: none;
-          transform: rotate(45deg);
-          &.swiper-pagination-bullet-active {
-            border-color: $main-color;
-            position: relative;
-            &::after {
-              content: "";
-              @include centerAbsolute();
-              width: 3px;
-              height: 3px;
-              background: $main-color;
-            }
+    }
+    .teamSwiperPagination {
+      padding: 40px 0 16px;
+      @include centerFlex();
+      gap: 4px;
+      .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        border-radius: 0;
+        border: 1px solid $text-color;
+        background: none;
+        transform: rotate(45deg);
+        &.swiper-pagination-bullet-active {
+          border-color: $main-color;
+          position: relative;
+          &::after {
+            content: "";
+            @include centerAbsolute();
+            width: 3px;
+            height: 3px;
+            background: $main-color;
           }
         }
       }
     }
   }
-  .features {
-    width: 100%;
-    margin-bottom: 60px;
-    background: #ebebfa;
-    background-image: url("../img/bg-pattern-1.png");
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-    padding: 40px 0;
-    p {
-      text-align: center;
-      color: $text-hover;
-      margin: 0;
+}
+a,
+button {
+  transition: $transation;
+}
+.features {
+  width: 100%;
+  margin-bottom: 60px;
+  background: #ebebfa;
+  background-image: url("../img/bg-pattern-1.png");
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  padding: 80px 0;
+  p {
+    text-align: center;
+    color: $text-hover;
+    margin: 0;
+    transition: $transation;
+  }
+  h2 {
+    text-align: center;
+    color: $main-color;
+    font-weight: 700;
+    margin-bottom: 32px;
+    transition: $transation;
+    font-weight: bold;
+  }
+  .feature {
+    background: $white;
+    padding: 24px;
+    transition: $transation;
+    @include centerFlex();
+    flex-direction: column;
+    height: 100%;
+    border-radius: 4px;
+    .icon {
+      width: 60px;
+      height: 60px;
+      transition: $transation;
+      img {
+        max-height: 100%;
+        transition: $transation;
+      }
     }
-    h3 {
+    h6 {
+      margin-top: 24px;
+      margin-bottom: 0;
+      line-height: 24px;
+      color: #07174e;
+      font-size: 18px;
+      font-weight: 500;
       text-align: center;
-      color: $main-color;
-      font-size: 26px;
-      font-weight: 700;
-      margin-bottom: 32px;
+      transition: $transation;
     }
-    .feature {
-      background: $white;
-      padding: 24px;
-      @include centerFlex();
-      flex-direction: column;
-      height: 100%;
-      border-radius: 4px;
-      .icon {
-        width: 60px;
-        height: 60px;
-        img {
-          max-height: 100%;
-        }
+    transition: $transation;
+    &:hover {
+      background: $text-hover;
+      .icon img {
+        filter: invert(1);
       }
       h6 {
-        margin-top: 24px;
-        margin-bottom: 0;
-        line-height: 24px;
-        color: #07174e;
-        font-size: 18px;
-        font-weight: 500;
-        text-align: center;
-      }
-      transition: $transation;
-      &:hover {
-        background: $text-hover;
-        .icon img {
-          filter: invert(1);
-        }
-        h6 {
-          color: $white;
-        }
+        color: $white;
       }
     }
   }
@@ -1032,7 +1093,7 @@ main {
       margin-top: 32px;
     }
   }
-  .project-img {
+  .project-images {
     @media (max-width: 992px) {
       margin-top: 60px;
     }
@@ -1053,7 +1114,6 @@ main {
   }
   .filter-btns {
     width: 100%;
-    height: 100%;
     @include centerFlex();
     .isotope-menu {
       flex-wrap: wrap;
@@ -1061,7 +1121,6 @@ main {
       background: #f8fafc;
       display: flex;
       cursor: pointer;
-      height: 100%;
       .filter-btn {
         height: 50px;
         @include centerFlex();
