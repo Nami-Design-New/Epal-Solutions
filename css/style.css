@@ -271,6 +271,11 @@ main {
   display: flex;
   align-items: center;
 }
+@media (max-width: 768px) {
+  .hero-section .hero-swiper .heroPagination {
+    justify-content: center;
+  }
+}
 .hero-section .hero-swiper .heroPagination .swiper-pagination-bullet {
   transition: all 0.4s ease-in-out;
   width: 10px;
@@ -385,6 +390,11 @@ main {
 }
 .swiper-slide.swiper-slide-active .headImg {
   animation: slideInRight 1s 0.5s both;
+}
+@media (max-width: 768px) {
+  .swiper-slide.swiper-slide-active .headImg {
+    animation: fadeInUp 1s 0.5s both;
+  }
 }
 
 @keyframes fadeInUp {
@@ -1155,12 +1165,14 @@ button {
   background: #f8fafc;
   display: flex;
   cursor: pointer;
+  gap: 8px;
 }
 .projects .filter-btns .isotope-menu .filter-btn {
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
   padding: 0 32px;
   border-radius: 8px;
   font-weight: 500;

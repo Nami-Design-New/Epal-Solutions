@@ -277,6 +277,9 @@ main {
       gap: 4px;
       display: flex;
       align-items: center;
+      @media (max-width: 768px) {
+        justify-content: center;
+      }
       .swiper-pagination-bullet {
         transition: all 0.4s ease-in-out;
         width: 10px;
@@ -384,10 +387,9 @@ main {
     }
   }
 }
-
 .swiper-slide.swiper-slide-active {
   h1 {
-    animation: fadeInUp 1s .5s both;
+    animation: fadeInUp 1s 0.5s both;
   }
   p {
     animation: fadeInUp 1s 1s both;
@@ -396,12 +398,12 @@ main {
     animation: fadeInUp 1s 1.5s both;
   }
   .headImg {
-    animation: slideInRight 1s .5s both;
+    animation: slideInRight 1s 0.5s both;
+    @media (max-width: 768px) {
+      animation: fadeInUp 1s 0.5s both;
+    }
   }
-  
-
 }
-
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -412,7 +414,6 @@ main {
     transform: translateY(0);
   }
 }
-
 @keyframes slideInRight {
   from {
     transform: translateX(-100%);
@@ -423,8 +424,6 @@ main {
     opacity: 1;
   }
 }
-
-
 .statics {
   position: relative;
   width: 100%;
@@ -758,7 +757,6 @@ main {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
-
     p {
       margin-bottom: 0;
       flex: 1;
@@ -824,7 +822,6 @@ main {
       color: #7b88a8;
     }
   }
-
   @media (min-width: 768px) {
     .row:nth-child(even) {
       flex-direction: row-reverse;
@@ -1121,9 +1118,11 @@ button {
       background: #f8fafc;
       display: flex;
       cursor: pointer;
+      gap: 8px;
       .filter-btn {
         height: 50px;
         @include centerFlex();
+        flex: 1;
         padding: 0 32px;
         border-radius: 8px;
         font-weight: 500;
@@ -1388,7 +1387,6 @@ button {
     }
   }
 }
-
 footer {
   width: 100%;
   padding-top: 60px;
