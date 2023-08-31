@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -258,23 +259,17 @@
     </footer>
 
 </body>
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
 <script src="js/main.js"></script>
 <script src="js/isotope.pkgd.min.js"></script>
+<script src="js/leaflet.js"></script>
 <script src="js/custom.js"></script>
-<script>
-    //filter isotop
-    $(document).ready(function () {
-        var $projects = $(".filter-wapper").isotope({
-            itemSelector: ".project-item",
-            layoutMode: "fitRows"
-        });
-        $(".filter-btns").on("click", ".filter-btn", function () {
-            $(".filter-btn").removeClass("active");
-            $(this).addClass("active");
-            var filterValue = $(this).attr("data-filter");
-            $projects.isotope({ filter: filterValue });
-        });
-    });
-</script>
 
 </html>

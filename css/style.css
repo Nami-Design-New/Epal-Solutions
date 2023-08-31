@@ -758,20 +758,16 @@ main {
   padding-bottom: 80px;
 }
 
-.about {
-  width: 100%;
-  padding: 60px 0;
-}
-.about .about-wrap {
+.about-wrap {
   padding-bottom: 60px;
 }
-.about .about-wrap .illustiration {
+.about-wrap .illustiration {
   width: 100%;
 }
-.about .about-wrap .illustiration img {
+.about-wrap .illustiration img {
   max-width: 100%;
 }
-.about .about-wrap .about-text h2 {
+.about-wrap .about-text h2 {
   color: #07174e;
   font-size: 40px;
   font-weight: 600;
@@ -780,11 +776,11 @@ main {
   padding-left: 48px;
 }
 @media (max-width: 576px) {
-  .about .about-wrap .about-text h2 {
+  .about-wrap .about-text h2 {
     font-size: 32px;
   }
 }
-.about .about-wrap .about-text h2::after {
+.about-wrap .about-text h2::after {
   width: 32px;
   height: 2px;
   content: "";
@@ -794,19 +790,25 @@ main {
   position: absolute;
   left: 0;
 }
-.about .about-wrap .about-text p {
+.about-wrap .about-text p {
   line-height: 28px;
   color: #7b88a8;
 }
-.about .team {
+@media (min-width: 768px) {
+  .about-wrap .row:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+
+.team {
   padding: 60px 0;
 }
-.about .team h3 {
+.team h3 {
   text-align: center;
   color: #07174e;
   font-size: 40px;
 }
-.about .team p {
+.team p {
   font-size: 16px;
   line-height: 24px;
   text-align: center;
@@ -814,44 +816,44 @@ main {
   color: #7b88a8;
   margin: 0 auto;
 }
-.about .team .swiper {
+.team .swiper {
   display: flex;
   flex-direction: column;
   padding: 80px 0 0;
 }
-.about .team .swiper .swiper-slide {
+.team .swiper .swiper-slide {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.about .team .swiper .swiper-slide .team-member {
+.team .swiper .swiper-slide .team-member {
   width: 100%;
   border: 1px solid #eeeeee;
   padding: 16px;
   border-radius: 4px;
   transition: all 0.4s ease-in-out;
 }
-.about .team .swiper .swiper-slide .team-member:hover {
+.team .swiper .swiper-slide .team-member:hover {
   border-color: transparent;
   box-shadow: 0 20px 40px 0 rgba(76, 111, 255, 0.15);
   transform: translateY(-16px);
 }
-.about .team .swiper .swiper-slide .team-member:hover .img .social-media {
+.team .swiper .swiper-slide .team-member:hover .img .social-media {
   height: 200px;
 }
-.about .team .swiper .swiper-slide .team-member .img {
+.team .swiper .swiper-slide .team-member .img {
   width: 100%;
   border-radius: 4px;
   overflow: hidden;
   position: relative;
 }
-.about .team .swiper .swiper-slide .team-member .img img {
+.team .swiper .swiper-slide .team-member .img img {
   width: 100%;
   aspect-ratio: 1/1;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.about .team .swiper .swiper-slide .team-member .img .social-media {
+.team .swiper .swiper-slide .team-member .img .social-media {
   transition: all 0.4s ease-in-out;
   position: absolute;
   top: 8px;
@@ -862,7 +864,7 @@ main {
   height: 0;
   overflow: hidden;
 }
-.about .team .swiper .swiper-slide .team-member .img .social-media a {
+.team .swiper .swiper-slide .team-member .img .social-media a {
   width: 30px;
   height: 30px;
   border-radius: 4px;
@@ -874,11 +876,11 @@ main {
           backdrop-filter: blur(16px) saturate(180%);
   background-color: rgba(255, 255, 255, 0.1);
 }
-.about .team .swiper .swiper-slide .team-member .img .social-media a i {
+.team .swiper .swiper-slide .team-member .img .social-media a i {
   font-size: 14px;
   color: #07174e;
 }
-.about .team .swiper .swiper-slide .team-member h6 {
+.team .swiper .swiper-slide .team-member h6 {
   font-size: 18px;
   line-height: 28px;
   text-align: center;
@@ -886,17 +888,17 @@ main {
   margin-top: 16px;
   margin-bottom: 0px;
 }
-.about .team .swiper .swiper-slide .team-member p {
+.team .swiper .swiper-slide .team-member p {
   font-size: 14px;
 }
-.about .team .swiper .teamSwiperPagination {
+.team .swiper .teamSwiperPagination {
   padding: 40px 0 16px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 4px;
 }
-.about .team .swiper .teamSwiperPagination .swiper-pagination-bullet {
+.team .swiper .teamSwiperPagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   border-radius: 0;
@@ -904,11 +906,11 @@ main {
   background: none;
   transform: rotate(45deg);
 }
-.about .team .swiper .teamSwiperPagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.team .swiper .teamSwiperPagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   border-color: #07174e;
   position: relative;
 }
-.about .team .swiper .teamSwiperPagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+.team .swiper .teamSwiperPagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -918,30 +920,39 @@ main {
   height: 3px;
   background: #07174e;
 }
-.about .features {
+
+a,
+button {
+  transition: all 0.4s ease-in-out;
+}
+
+.features {
   width: 100%;
   margin-bottom: 60px;
   background: #ebebfa;
   background-image: url("../img/bg-pattern-1.png");
   background-repeat: no-repeat;
   background-position: 0% 50%;
-  padding: 40px 0;
+  padding: 80px 0;
 }
-.about .features p {
+.features p {
   text-align: center;
   color: #4c6fff;
   margin: 0;
+  transition: all 0.4s ease-in-out;
 }
-.about .features h3 {
+.features h2 {
   text-align: center;
   color: #07174e;
-  font-size: 26px;
   font-weight: 700;
   margin-bottom: 32px;
+  transition: all 0.4s ease-in-out;
+  font-weight: bold;
 }
-.about .features .feature {
+.features .feature {
   background: #fff;
   padding: 24px;
+  transition: all 0.4s ease-in-out;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -950,14 +961,16 @@ main {
   border-radius: 4px;
   transition: all 0.4s ease-in-out;
 }
-.about .features .feature .icon {
+.features .feature .icon {
   width: 60px;
   height: 60px;
+  transition: all 0.4s ease-in-out;
 }
-.about .features .feature .icon img {
+.features .feature .icon img {
   max-height: 100%;
+  transition: all 0.4s ease-in-out;
 }
-.about .features .feature h6 {
+.features .feature h6 {
   margin-top: 24px;
   margin-bottom: 0;
   line-height: 24px;
@@ -965,14 +978,15 @@ main {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
+  transition: all 0.4s ease-in-out;
 }
-.about .features .feature:hover {
+.features .feature:hover {
   background: #4c6fff;
 }
-.about .features .feature:hover .icon img {
+.features .feature:hover .icon img {
   filter: invert(1);
 }
-.about .features .feature:hover h6 {
+.features .feature:hover h6 {
   color: #fff;
 }
 

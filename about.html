@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/leaflet.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -57,13 +58,13 @@
     <!-- main-wrapper -->
     <main class="content">
         <!-- ======= page-header  -->
-        <div class="section-header">
+        <section class="section-header">
             <h1>About us</h1>
             <h6><a href="index.html">HOME</a> / ABOUT US</h6>
-        </div>
-        <section class="about">
-            <!-- ======= About Section ======= -->
-            <div class="container about-wrap">
+        </section>
+        <!-- ======= About Section ======= -->
+        <section class="about-wrap">
+            <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-12">
                         <div class="illustiration">
@@ -71,9 +72,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 d-flex justify-content-center align-items-center ps-lg-5 p-4">
-                        <div class="about-text" data-aos="fade-up">
-                            <h2>Who We Are</h2>
-                            <p>
+                        <div class="about-text">
+                            <h2 data-aos="fade-up">Who We Are</h2>
+                            <p data-aos="fade-up">
                                 EPAL Solutions established in 2020 is an international
                                 software house specializing in web/mobile solutions
                                 and digital transformations.
@@ -87,22 +88,22 @@
                         </div>
                     </div>
                 </div>
-                <div class="row flex-lg-row flex-column-reverse">
+                <div class="row">
+                    <div class="col-lg-6 col-12">
+                        <div class="illustiration">
+                            <img src="img/vission.svg" alt="our-vision" data-aos="fade-up">
+                        </div>
+                    </div>
                     <div class="col-lg-6 col-12 pb-lg-0 p-4 d-flex justify-content-center align-items-center">
-                        <div class="about-text" data-aos="fade-up">
-                            <h2>Our Vision</h2>
-                            <p>
+                        <div class="about-text">
+                            <h2 data-aos="fade-up">Our Vision</h2>
+                            <p data-aos="fade-up">
                                 Our vision is to be a leading global provider of custom application development
                                 services, recognized for our exceptional quality, customer-centric approach, and
                                 commitment to continuous innovation. We aim to foster long-term partnerships with our
                                 clients, enabling them to stay ahead of the curve and thrive in an ever-evolving
                                 technological landscape.
                             </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-12">
-                        <div class="illustiration">
-                            <img src="img/vission.svg" alt="our-vision" data-aos="fade-up">
                         </div>
                     </div>
                 </div>
@@ -113,9 +114,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6 col-12 ps-lg-5 p-4 d-flex justify-content-center align-items-center">
-                        <div class="about-text" data-aos="fade-up">
-                            <h2>Our Mission</h2>
-                            <p>
+                        <div class="about-text">
+                            <h2 data-aos="fade-up">Our Mission</h2>
+                            <p data-aos="fade-up">
                                 Our mission is to empower businesses and individuals by creating innovative and reliable
                                 custom software applications. We strive to understand our clients' unique needs and
                                 deliver cutting-edge solutions that drive growth, enhance efficiency, and unlock their
@@ -125,53 +126,55 @@
                     </div>
                 </div>
             </div>
-            <!-- ======= Features Section ======= -->
-            <div class="features">
-                <p>WHY US</p>
-                <h3>Boost Your Brand With Epal Solutions.</h3>
-                <div class="container">
-                    <div class="row">
-                        <!-- feature -->
-                        <div class="col-lg-3 col-6 p-3">
-                            <div class="feature" data-aos="fade-up" data-aos-duration="500">
-                                <div class="icon">
-                                    <img src="img/support.svg" alt="24/7 support">
-                                </div>
-                                <h6 class="title">24/7 Support and Maintenance</h6>
+        </section>
+        <!-- ======= Features Section ======= -->
+        <section class="features">
+            <p data-aos="fade-up">WHY US</p>
+            <h2 data-aos="fade-up">Boost Your Brand With Epal Solutions.</h2>
+            <div class="container">
+                <div class="row">
+                    <!-- feature -->
+                    <div class="col-lg-3 col-6 p-3" data-aos="fade-up">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="img/support.svg" alt="24/7 support">
                             </div>
+                            <h6 class="title">24/7 Support and Maintenance</h6>
                         </div>
-                        <!-- feature -->
-                        <div class="col-lg-3 col-6 p-3">
-                            <div class="feature" data-aos="fade-up" data-aos-duration="500" data-aos-delay="200">
-                                <div class="icon">
-                                    <img src="img/performance.svg" alt="performance">
-                                </div>
-                                <h6 class="title">Performance Optimization</h6>
+                    </div>
+                    <!-- feature -->
+                    <div class="col-lg-3 col-6 p-3" data-aos="fade-up">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="img/performance.svg" alt="performance">
                             </div>
+                            <h6 class="title">Performance Optimization</h6>
                         </div>
-                        <!-- feature -->
-                        <div class="col-lg-3 col-6 p-3">
-                            <div class="feature" data-aos="fade-up" data-aos-duration="500" data-aos-delay="400">
-                                <div class="icon">
-                                    <img src="img/security.svg" alt="Security">
-                                </div>
-                                <h6 class="title">Data Security and Privacy</h6>
+                    </div>
+                    <!-- feature -->
+                    <div class="col-lg-3 col-6 p-3" data-aos="fade-up">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="img/security.svg" alt="Security">
                             </div>
+                            <h6 class="title">Data Security and Privacy</h6>
                         </div>
-                        <!-- feature -->
-                        <div class="col-lg-3 col-6 p-3">
-                            <div class="feature" data-aos="fade-up" data-aos-duration="500" data-aos-delay="600">
-                                <div class="icon">
-                                    <img src="img/fast.svg" alt="fast development">
-                                </div>
-                                <h6 class="title">Fast Development Process</h6>
+                    </div>
+                    <!-- feature -->
+                    <div class="col-lg-3 col-6 p-3" data-aos="fade-up">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="img/fast.svg" alt="fast development">
                             </div>
+                            <h6 class="title">Fast Development Process</h6>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- ======= Team Section ======= -->
-            <!-- <div class="container team">
+        </section>
+        <!-- ======= Team Section ======= -->
+        <!-- <section class="team">
+            <div class="container">
                 <h3>Team Members</h3>
                 <p>
                     Services are professional offerings provided by businesses to meet specific needs or solve problems
@@ -180,7 +183,7 @@
                 <div class="swiper teamSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team1.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -211,7 +214,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team2.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -242,7 +245,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team3.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -273,7 +276,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team4.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -304,7 +307,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team5.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -335,7 +338,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team6.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -366,7 +369,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team7.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -397,7 +400,7 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <div class="team-member">
+                            <div class="team-member" data-aos="fade-up">
                                 <div class="img">
                                     <img src="img/team9.jpg" alt="team-member">
                                     <ul class="social-media">
@@ -430,15 +433,17 @@
                     </div>
                     <div class="teamSwiperPagination"></div>
                 </div>
-            </div> -->
-            <!-- ======= Newsletter Section ======= -->
-            <div class="container news">
+            </div>
+        </section> -->
+        <!-- ======= Newsletter Section ======= -->
+        <section class="news">
+            <div class="container">
                 <div class="row">
                     <div class="col-12 newsletter">
-                        <h3>
+                        <h3 data-aos="fade-up">
                             Receive the latest technology & business news in your inbox
                         </h3>
-                        <form action="">
+                        <form action="" data-aos="fade-down">
                             <input type="email" name="email" id="email" placeholder="Your email address">
                             <button type="submit">Sign Up</button>
                         </form>
@@ -533,12 +538,18 @@
             </div>
         </div>
     </footer>
-
 </body>
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
+<!-- //////////////////////////////////////////////////////////////// -->
 <script src="js/main.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/leaflet.js"></script>
 <script src="js/custom.js"></script>
-<script>
-    AOS.init();
-</script>
 
 </html>
