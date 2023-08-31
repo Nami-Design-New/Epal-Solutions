@@ -161,25 +161,25 @@ $(document).ready(function () {
     const isDarkMode = window.matchMedia(
       "(prefers-color-scheme: dark)"
     ).matches;
-    const faviconName = isDarkMode ? "assets/images/fav.svg" : "assets/images/fav2.svg";
+    const faviconName = isDarkMode ? "img/fav.svg" : "img/fav2.svg";
     favicon.href = faviconName;
   }
   setFavicon();
 });
 $(document).ready(function () {
   //aos Delay
-  $("section").each(function () {
-      const sectionDivs = $(this).find("[data-aos]");
-      sectionDivs.each(function (index) {
-          $(this).attr("data-aos-delay", (index + 1) * 100);
-      });
+  $("section").each(function() {
+    const sectionDivs = $(this).find("[data-aos]");
+    sectionDivs.each(function(index) {
+      $(this).attr("data-aos-delay", (index + 1) * 100);
+    });
   });
   // aos
   AOS.init({
-      offset: 20,
-      delay: 50,
-      duration: 500,
-      easing: "linear",
-      once: true
+    offset: 20,
+    delay: 50,
+    duration: 750,
+    // easing: "linear",
+    once: true
   });
 });
