@@ -258,12 +258,18 @@ main {
     flex-direction: column;
     @include centerFlex();
     .swiper-slide {
+      background-color: #f8f9fd;
       padding: 24px;
       display: flex;
       // justify-content: center;
-      cursor: grab;
+      // cursor: grab;
       height: auto;
-      @media (max-width: 992px) {
+      @media (min-width: 768px) {
+        .row {
+          flex-direction: row-reverse;
+        }
+      }
+      @media (max-width: 768px) {
         align-items: center;
       }
     }
@@ -344,8 +350,6 @@ main {
     }
   }
   @media (max-width: 990px) {
-    background-image: none;
-    background: #e9e9f9;
     .hero-description {
       align-items: center;
       h1 {
@@ -380,6 +384,7 @@ main {
   }
   .headImg {
     width: 100%;
+    overflow: hidden;
     img {
       width: 100%;
       aspect-ratio: 1/1;
@@ -397,7 +402,7 @@ main {
   .links {
     animation: fadeInUp 1s 1.5s both;
   }
-  .headImg {
+  .headImg img {
     animation: slideInRight 1s 0.5s both;
     @media (max-width: 768px) {
       animation: fadeInUp 1s 0.5s both;
@@ -1107,7 +1112,7 @@ button {
 .projects {
   padding: 60px 0;
   @media (max-width: 576px) {
-    padding: 60px 16px;
+    padding: 60px 8px;
   }
   .filter-btns {
     width: 100%;
@@ -1137,9 +1142,9 @@ button {
     }
   }
   .filter-wapper {
-    margin-top: 60px;
+    margin-top: 40px;
     .project-item {
-      margin-bottom: 40px;
+      // margin-bottom: 40px;
       &:hover .image .layer {
         opacity: 1;
         transform: scaleY(1);
@@ -1151,15 +1156,19 @@ button {
         border-radius: 16px;
         overflow: hidden;
         height: min(350px, 420px);
+        @media (max-width: 768px) {
+          height: min(200px, 300px);
+        }
         img {
           width: 100%;
           object-fit: cover;
+          object-position: bottom;
         }
         .layer {
           background: linear-gradient(
             180deg,
-            rgba(7, 23, 78, 0) 23.76%,
-            #07174e 90.19%
+            rgba(7, 23, 78, 0) 0,
+            #07174ef5 80%
           );
           position: absolute;
           left: 0;

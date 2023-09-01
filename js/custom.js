@@ -28,19 +28,19 @@ let aboutSwiper = new Swiper(".teamSwiper", {
   loop: true,
   pagination: {
     el: ".teamSwiperPagination",
-    clickable: true
+    clickable: true,
   },
   breakpoints: {
     992: {
-      slidesPerView: 4
+      slidesPerView: 4,
     },
     768: {
-      slidesPerView: 3
+      slidesPerView: 3,
     },
     350: {
-      slidesPerView: 1
-    }
-  }
+      slidesPerView: 1,
+    },
+  },
 });
 //contact higlight inputs
 function highlight(el) {
@@ -133,6 +133,7 @@ let heroSwiper = new Swiper(".hero-swiper", {
   loop: true,
   spaceBetween: 0,
   speed: 1000,
+  effect: "fade",
   centeredSlides: true,
   autoplay: {
     delay: 2500,
