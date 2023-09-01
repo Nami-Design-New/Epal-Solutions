@@ -485,7 +485,7 @@ main {
   background-color: $white;
   .container {
     width: 100%;
-    height: 160px;
+    // height: 160px;
     padding: 24px;
     border-radius: 16px;
     pointer-events: none;
@@ -493,13 +493,22 @@ main {
     .projects {
       padding: 0;
       display: flex;
-      height: 100%;
       .img {
-        width: 100%;
-        height: 100%;
+        padding: 20px;
+
         @include centerFlex();
         img {
           max-width: 100%;
+          aspect-ratio: 1/1;
+          object-fit: contain;
+          padding: 16px;
+          filter: grayscale(1) opacity(.6) brightness(.8);
+          transition: $transation;
+
+          &:hover{
+            filter: grayscale(0) opacity(1);
+
+          }
         }
       }
     }
@@ -1410,8 +1419,8 @@ footer {
   .column {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    // justify-content: flex-end;
+    // align-items: center;
     gap: 10px;
     @media (max-width: 992px) {
       &.column-2 {
@@ -1424,14 +1433,14 @@ footer {
       margin-top: 24px;
     }
     .title {
-      width: 150px;
+      // width: 150px;
       h2 {
         font-size: 18px;
         color: $white;
       }
     }
     ul {
-      width: 150px;
+      // width: 150px;
       li a {
         font-size: 14px;
         color: #e7e5ea;

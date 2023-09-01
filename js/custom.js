@@ -99,21 +99,24 @@ window.onscroll = function () {
 //projects slider
 var projectsSwiper = new Swiper(".projects", {
   loop: true,
-  spaceBetween: 50,
-  speed: 3000,
+  spaceBetween: 0,
+  speed: 2000,
   centeredSlides: true,
   autoplay: {
-    delay: 2500,
+    delay: 2000,
   },
   breakpoints: {
+    1200: {
+      slidesPerView: 7,
+    },
     992: {
-      slidesPerView: 5,
+      slidesPerView: 6,
     },
     768: {
       slidesPerView: 4,
     },
     350: {
-      slidesPerView: 1,
+      slidesPerView: 2,
     },
   },
 });
